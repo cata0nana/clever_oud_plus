@@ -26,10 +26,15 @@ ENV HOME=/headless \
 
 
 
-EXPOSE $VNC_PORT $NO_VNC_PORT $SSH_PORT $SUPER_VISOR__PORT $NO_VNC_PORT_A
+#EXPOSE $VNC_PORT $NO_VNC_PORT $SSH_PORT $SUPER_VISOR__PORT $NO_VNC_PORT_A
 
 
-ENTRYPOINT [ "/usr/bin/tini", "--", "/dockerstartup/startup.sh" ]
+#ENTRYPOINT [ "/usr/bin/tini", "--", "/dockerstartup/startup.sh" ]
+USER 0
+EXPOSE 8080
+
+ENTRYPOINT ["/dockerstartup/vnc_startup.sh"]
+CMD ["--wait"]
 
 #CMD ["/bin/bash", "/dockerstartup/startup.sh"]
 
