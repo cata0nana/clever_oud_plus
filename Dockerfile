@@ -36,7 +36,7 @@ USER 0
 EXPOSE 8080
 ENTRYPOINT [ "/usr/bin/tini", "--", "/dockerstartup/startup.sh" ]
 #ENTRYPOINT ["/dockerstartup/vnc_startup.sh"]
-#CMD ["--wait"]
+#CMD ["--wait"] #b
 
 #CMD ["/bin/bash", "/dockerstartup/startup.sh"]
 
