@@ -25,8 +25,8 @@ ENV HOME=/headless \
 ### Envrionment config
 
 #startup_sc
-ADD ./startup_sc/ $INST_SCRIPTS/
-
+ADD ./startup_sc $STARTUPDIR
+#ADD ./src/common/scripts $STARTUPDIR
 #EXPOSE $VNC_PORT $NO_VNC_PORT $SSH_PORT $SUPER_VISOR__PORT $NO_VNC_PORT_A
 
 
