@@ -1,5 +1,5 @@
 #!/bin/bash
-### every exit != 0 fails the script
+### every exit != 0 fails the script sss
 #set -e
 
 ## print out help
