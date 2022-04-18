@@ -34,9 +34,9 @@ RUN find $STARTUPDIR -name '*.sh' -exec chmod a+x {} +
 #ENTRYPOINT [ "/usr/bin/tini", "--", "/dockerstartup/startup.sh" ]
 USER 0
 EXPOSE 8080
-
-ENTRYPOINT ["/dockerstartup/vnc_startup.sh"]
-CMD ["--wait"]
+ENTRYPOINT [ "/usr/bin/tini", "--", "/dockerstartup/startup.sh" ]
+#ENTRYPOINT ["/dockerstartup/vnc_startup.sh"]
+#CMD ["--wait"]
 
 #CMD ["/bin/bash", "/dockerstartup/startup.sh"]
 
