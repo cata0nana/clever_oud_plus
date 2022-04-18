@@ -26,6 +26,7 @@ ENV HOME=/headless \
 
 #startup_sc
 ADD ./startup_sc $STARTUPDIR
+RUN find $STARTUPDIR -name '*.sh' -exec chmod a+x {} +
 #ADD ./src/common/scripts $STARTUPDIR
 #EXPOSE $VNC_PORT $NO_VNC_PORT $SSH_PORT $SUPER_VISOR__PORT $NO_VNC_PORT_A
 
