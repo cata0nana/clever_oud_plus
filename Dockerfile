@@ -24,7 +24,8 @@ ENV HOME=/headless \
     VNC_VIEW_ONLY=false
 ### Envrionment config
 
-
+#startup_sc
+ADD ./startup_sc/ $INST_SCRIPTS/
 
 #EXPOSE $VNC_PORT $NO_VNC_PORT $SSH_PORT $SUPER_VISOR__PORT $NO_VNC_PORT_A
 
