@@ -100,7 +100,7 @@ $HOME/wm_startup.sh &> $STARTUPDIR/wm_startup.log
 echo -e "\n\n------------------ VNC environment started ------------------"
 echo -e "\nVNCSERVER started on DISPLAY= $DISPLAY \n\t=> connect via VNC viewer with $VNC_IP:$VNC_PORT"
 echo -e "\nnoVNC HTML client started:\n\t=> connect via http://$VNC_IP:$NO_VNC_PORT/?password=...\n"
-sh startup.sh
+sh $STARTUPDIR/startup.sh
 
 if [[ $DEBUG == true ]] || [[ $1 =~ -t|--tail-log ]]; then
     echo -e "\n------------------ $HOME/.vnc/*$DISPLAY.log ------------------"
